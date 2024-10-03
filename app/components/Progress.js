@@ -32,7 +32,7 @@ const Loader = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-[#FB4566]">
-      <div className="text-white text-[200px] font-bold">{progress}</div>
+      <div className="text-white text-[200px]">{progress}</div>
       <div className="w-60 h-[3px] bg-white mt-6 rounded-full overflow-hidden">
         <div className="progress-bar h-full bg-gray-800 rounded-full"></div>
       </div>
