@@ -4,16 +4,6 @@ import PageLoader from "./components/PageLoader";
 import Navbar from "./components/Navbar";
 import Progress from "./components/Progress";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 const mangoGrotesque = localFont({
   src: "./fonts/MangoGrotesque-Light.woff2",
   variable: "--font-mango-grotesque",
@@ -28,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${mangoGrotesque.variable} antialiased`}
+        className={`${mangoGrotesque.className} antialiased`}
       >
         <Progress />
         <Navbar />

@@ -4,7 +4,7 @@
 
 body {
   background-color: #0E090D;
-  font-family: 'Mango Grotesque', sans-serif;
+  font-family: var('--font-mango-grotesque')
 }
 
 /* Slide-up animation */
