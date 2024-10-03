@@ -11,8 +11,8 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='flex justify-between w-full px-36 py-20 items-center h-16 text-white fixed shadow-sm' role='navigation'>
-        <Link href='/' className='text-4xl text-[#E8495F] hover:text-[#E8495F] transition ease-in-out delay-550'>SAEED Jr.</Link>
+    <nav className='flex justify-between w-full p-8 sm:px-24 sm:py-20 md:px-36 md:py-20 items-center h-16 text-white fixed shadow-sm' role='navigation'>
+        <Link href='/' className='text-lg sm:text-2xl md:text-4xl text-[#E8495F] hover:text-[#E8495F] transition ease-in-out delay-550'>SAEED Jr.</Link>
         <div className='flex gap-4'>
             <Link href='/' className={getLinkClass('/')}>Home</Link>
             <Link href='/work' className={getLinkClass('/work')}>Work</Link>
