@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import PageLoader from "./components/PageLoader";
+import Navbar from "./components/Navbar";
+import Progress from "./components/Progress";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +14,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const mangoGrotesque = localFont({
+  src: "./fonts/MangoGrotesque-Light.woff2",
+  variable: "--font-mango-grotesque",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -21,8 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${mangoGrotesque.variable} antialiased`}
       >
+        <Progress />
+        <Navbar />
         {children}
       </body>
     </html>

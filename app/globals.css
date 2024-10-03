@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0E090D;
+  font-family: 'Mango Grotesque', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Slide-up animation */
+.slide-up {
+  transition: transform 0.8s ease-in-out; /* Control the duration of the slide-up */
+  transform: translateY(0); /* Initial position */
 }
+
+.slide-up {
+  transform: translateY(-100%); /* Slide up out of view */
+}
+
+.navlinks {
+  opacity: 0.6;
+}
+
+.navlinks:hover {
+  opacity: 1;
+}
+
+.activenavlink {
+  opacity: 1;
+  border-bottom: 2px solid #FB4566;
+  border-radius: 0 0 2px 2px;
+}
+
+
