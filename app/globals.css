@@ -13,6 +13,17 @@ body {
   font-family: var('--font-mango-grotesque')
 }
 
+::selection {
+  background-color: #FB4666; /* Change this to your desired background color */
+  color: black;              /* Change this to your desired text color */
+}
+
+/* For WebKit browsers */
+::-moz-selection {
+  background-color: #FB4666; /* Change this to your desired background color */
+  color: black;              /* Change this to your desired text color */
+}
+
 .mini-text {
   font-family: 'PP Neue Montreal', sans-serif;
 }
