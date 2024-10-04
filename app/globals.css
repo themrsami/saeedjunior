@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+
+* {
+  cursor: none;
+}
+
 body {
   background-color: #0E090D;
   font-family: var('--font-mango-grotesque')
+}
+
+.mini-text {
+  font-family: 'PP Neue Montreal', sans-serif;
+  text-align: center;
 }
 
 /* Slide-up animation */
@@ -31,4 +42,47 @@ body {
   border-radius: 0 0 2px 2px;
 }
 
+/* Logo Glow Effect */
+.hover\\:glow:hover {
+  box-shadow: 0 0 8px 4px rgba(232, 73, 95, 0.6), 0 0 20px rgba(232, 73, 95, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
 
+/* 3D Rotate Effect for Navbar Links */
+.rotate3d {
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.rotate3d:hover {
+  transform: rotateY(15deg); /* Adjust the angle as needed */
+}
+
+/* Circle with Animated Gradient */
+.gradient-circle {
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #FE8569, #F04462, #FE8569, #F04462);
+  animation: complex-gradient-animation 1s ease-in-out infinite;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation for Gradient */
+@keyframes complex-gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

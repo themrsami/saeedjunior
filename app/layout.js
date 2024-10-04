@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import PageLoader from "./components/PageLoader";
 import Navbar from "./components/Navbar";
 import Progress from "./components/Progress";
+import Cursor from "./components/Cursor";
 
 const mangoGrotesque = localFont({
   src: "./fonts/MangoGrotesque-Light.woff2",
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${mangoGrotesque.className} antialiased`}
       >
+        <Cursor />
         <Progress />
         <Navbar />
         {children}

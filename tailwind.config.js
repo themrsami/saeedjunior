@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        clamp: "clamp(1rem, 7vw, 12rem)",
+      },
     },
   },
   plugins: [],
