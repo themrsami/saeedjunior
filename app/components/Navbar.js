@@ -12,10 +12,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='flex justify-between w-full p-4 sm:px-12 sm:py-8 md:px-24 md:py-12 items-center h-16 text-white fixed top-0 left-0 z-50 shadow-sm'>
+    <nav className='flex justify-between w-full p-4 sm:px-12 sm:py-8 md:px-28 md:py-16 items-center h-16 text-white fixed top-0 left-0 z-10 shadow-sm'>
       {/* Brand or Logo with Glow Effect */}
-      <Link href='/' className='text-lg sm:text-2xl md:text-4xl text-[#E8495F] hover:text-[#E8495F] font-bold tracking-wider transition ease-in-out delay-75 hover:glow'>
-        SAEED Jr.
+      <Link href='/' className='text-lg sm:text-2xl md:text-3xl tracking-wider transition ease-in-out delay-75 hover:glow home-link'>
+        <span class="home-link-text">Saeed Jr.</span>
+        <span class="home-link-hover-text-logo">Saeed Jr.</span>
       </Link>
 
       {/* Navigation Links with 3D Rotate Effect */}

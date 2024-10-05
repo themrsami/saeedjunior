@@ -89,6 +89,7 @@ body {
 	position: relative;
 	padding: 5px 10px;
 	text-decoration: none;
+  font-weight: 100;
 }
 
 .home-link-text {
@@ -110,11 +111,27 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+.home-link-hover-text-logo {
+	position: absolute;
+	top: 100%; /* Ensure the hover text is fully hidden below */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #FB4766;
+	transform: translateY(0); /* Initially positioned completely off-screen */
+	transition: transform 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .home-link:hover .home-link-text {
 	transform: translateY(-120%); /* Move the main text up by 120% */
 }
 
 .home-link:hover .home-link-hover-text {
+	transform: translateY(-100%); /* Bring the hover text up into view */
+}
+.home-link:hover .home-link-hover-text-logo {
 	transform: translateY(-100%); /* Bring the hover text up into view */
 }

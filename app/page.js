@@ -1,12 +1,19 @@
-import Image from "next/image";
+'use client'
+import React, { useState } from "react";
 import PageLoader from "./components/PageLoader";
 import Homepage from "./components/Homepage";
 
 export default function Home() {
-  return (
-    <>
-      <PageLoader title='Home'/>
-      <Homepage/>
-    </>
-  );
+    const [loading, setLoading] = useState(true);
+
+    const handleLoaderComplete = () => {
+        setLoading(false); // Hide loader and show Homepage
+    };
+
+    return (
+        <>
+            {loading && <PageLoader title='Home' onComplete={handleLoaderComplete} />}
+            {!loading && <Homepage />}
+        </>
+    );
 }
