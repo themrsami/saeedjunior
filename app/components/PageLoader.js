@@ -13,7 +13,7 @@ const PageLoader = ({ title, onComplete }) => {
                 borderRadius: '0%', // Start with sharp corners
             }, 
             {
-                duration: 0.8, // Faster appearance
+                duration: 0.6, // Faster appearance
                 ease: "power3.inOut",
                 y: '0%', // Move to its original position
             }
@@ -22,7 +22,7 @@ const PageLoader = ({ title, onComplete }) => {
         // Slide out the loader after a delay (you can adjust the timing)
         const slideOutTimeout = setTimeout(() => {
             gsap.to(targetRef.current, {
-                duration: 0.8, // Faster disappearance
+                duration: 0.6, // Faster disappearance
                 ease: "power3.inOut",
                 y: '-100%', // Move the loader out of view
                 onComplete: () => {
@@ -30,7 +30,7 @@ const PageLoader = ({ title, onComplete }) => {
                     if (onComplete) onComplete();
                 }
             });
-        }, 1500); // Adjust delay as needed
+        }, 800); // Adjust delay as needed
 
         return () => clearTimeout(slideOutTimeout); // Cleanup timeout on unmount
     }, [onComplete]);
@@ -38,6 +38,7 @@ const PageLoader = ({ title, onComplete }) => {
     return (
         <div
             ref={targetRef}
+            className='font-semibold'
             style={{
                 backgroundColor: '#FB4566',
                 width: '100vw',
@@ -49,7 +50,7 @@ const PageLoader = ({ title, onComplete }) => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 color: 'white',
-                fontSize: '8rem',
+                fontSize: '12rem',
                 textAlign: 'center',
                 zIndex: 10 // Ensure it covers everything else
             }}

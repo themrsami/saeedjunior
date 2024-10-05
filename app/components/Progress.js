@@ -41,7 +41,7 @@ const Loader = () => {
 
   return (
     <div className="loader-container flex flex-col justify-center items-center h-screen fixed z-50 w-screen bg-[#FB4566]">
-      <div className="text-white text-[200px]">{progress}</div>
+      <div className="text-white text-[200px] font-semibold">{progress}</div>
       <div className="w-32 -mt-16 h-[1px] bg-gray-400 mt-6 rounded-full overflow-hidden">
         <div className="progress-bar h-full bg-white rounded-full"></div>
       </div>
