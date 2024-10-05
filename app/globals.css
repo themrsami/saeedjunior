@@ -4,10 +4,6 @@
 
 @import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
 
-* {
-  cursor: none;
-}
-
 body {
   background-color: #0E090D;
   font-family: var('--font-mango-grotesque')
@@ -38,34 +34,24 @@ body {
   transform: translateY(-100%); /* Slide up out of view */
 }
 
-.navlinks {
-  opacity: 0.6;
-}
-
-.navlinks:hover {
-  opacity: 1;
-}
-
-.activenavlink {
-  opacity: 1;
-  border-bottom: 2px solid #FB4566;
-  border-radius: 0 0 2px 2px;
+/* Pseudo-element to create the circular dot */
+.activenavlink::after {
+  color: white;
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Positioning it relative to the link */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Centering adjustment */
+  width: 4px; /* Width of the dot */
+  height: 4px; /* Height of the dot */
+  background-color: #FB4566; /* Dot color */
+  border-radius: 50%; /* Makes it circular */
+  transition: background-color 0.3s; /* Optional: Add a transition for hover effect */
 }
 
 /* Logo Glow Effect */
 .hover\\:glow:hover {
   box-shadow: 0 0 8px 4px rgba(232, 73, 95, 0.6), 0 0 20px rgba(232, 73, 95, 0.6);
   transition: box-shadow 0.3s ease-in-out;
-}
-
-/* 3D Rotate Effect for Navbar Links */
-.rotate3d {
-  transition: transform 0.3s ease-in-out;
-  transform-style: preserve-3d;
-}
-
-.rotate3d:hover {
-  transform: rotateY(15deg); /* Adjust the angle as needed */
 }
 
 /* Circle with Animated Gradient */
@@ -95,4 +81,40 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.home-link {
+	overflow: hidden; /* Ensures nothing beyond the bounds of the link is visible */
+	display: inline-block;
+	position: relative;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.home-link-text {
+	position: relative;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.home-link-hover-text {
+	position: absolute;
+	top: 100%; /* Ensure the hover text is fully hidden below */
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: white;
+	transform: translateY(0); /* Initially positioned completely off-screen */
+	transition: transform 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home-link:hover .home-link-text {
+	transform: translateY(-120%); /* Move the main text up by 120% */
+}
+
+.home-link:hover .home-link-hover-text {
+	transform: translateY(-100%); /* Bring the hover text up into view */
 }
