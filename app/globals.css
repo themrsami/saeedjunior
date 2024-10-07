@@ -135,3 +135,25 @@ body {
 .home-link:hover .home-link-hover-text-logo {
 	transform: translateY(-100%); /* Bring the hover text up into view */
 }
+
+.aboutme-text{
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+/* Keyframes for continuous scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Styling the marquee */
+.marquee {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  /* animation-direction: normal; This will be adjusted dynamically */
+}
+

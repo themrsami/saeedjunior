@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import PageLoader from "./components/PageLoader";
 import Homepage from "./components/Homepage";
+import Aboutme from "./components/Aboutme";
+import SkillsSection from "./components/SkillsSection";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -14,6 +16,8 @@ export default function Home() {
         <>
             {loading && <PageLoader title='Home' onComplete={handleLoaderComplete} />}
             {!loading && <Homepage />}
+            {!loading && <Aboutme />}
+            {!loading && <SkillsSection />}
         </>
     );
 }
