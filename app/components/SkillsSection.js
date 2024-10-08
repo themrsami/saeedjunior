@@ -1,93 +1,94 @@
-'use client';
+import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
+import Skillsheading from "./Skillsheading";
+import SkillsSectionHeading from "./SkillsSectionHeading";
+import Link from "next/link";
 
-import { useEffect, useRef } from 'react';
-
-const SkillsSection = () => {
-  const marqueeRef = useRef(null);
-
-  useEffect(() => {
-    const marqueeElement = marqueeRef.current;
-
-    // Default speed and scroll direction for the marquee
-    let speed = 1;
-    let scrollDirection = 1;
-
-    // Function to update the scroll speed and direction based on mouse wheel
-    const handleScroll = (event) => {
-      const delta = Math.sign(event.deltaY); // Positive for down, negative for up
-
-      if (delta > 0) {
-        speed = 4; // Increase speed when scrolling down
-        scrollDirection = -1; // Scroll left on downward scroll
-      } else {
-        speed = 4; // Increase speed when scrolling up
-        scrollDirection = 1; // Scroll right on upward scroll
-      }
-
-      // Reset the speed back to normal after 0.5 seconds
-      setTimeout(() => {
-        speed = 1;
-      }, 500);
-
-      // Update marquee speed and direction
-      marqueeElement.style.animationDuration = `${10 / speed}s`; // Adjust the speed of the animation
-      marqueeElement.style.animationDirection = scrollDirection > 0 ? 'normal' : 'reverse'; // Adjust direction
-    };
-
-    // Start animation
-    const startMarquee = () => {
-      marqueeElement.style.animationDuration = `${10 / speed}s`;
-      marqueeElement.style.animationDirection = scrollDirection > 0 ? 'normal' : 'reverse';
-    };
-
-    // Attach event listener to the window, not just the section
-    window.addEventListener('wheel', handleScroll);
-    marqueeElement.addEventListener('animationiteration', startMarquee);
-
-    return () => {
-      // Clean up event listeners
-      window.removeEventListener('wheel', handleScroll);
-      marqueeElement.removeEventListener('animationiteration', startMarquee);
-    };
-  }, []);
-
+export default function ScrollBasedVelocity() {
   return (
-    <section className="relative w-full h-[50vh] flex flex-col items-center justify-center py-24">
-      {/* Horizontal line above the skills */}
-      <div className="relative w-full mb-8">
-        <hr className="border-gray-400" />
-      </div>
+    <div className="py-4 px-2">
+      <Skillsheading />
 
-      {/* Skills Section */}
-      <div className="w-full overflow-hidden">
-        <div
-          ref={marqueeRef}
-          className="marquee flex items-center justify-start space-x-16 whitespace-nowrap"
-          style={{
-            animation: 'scroll 15s linear infinite',
-          }}
-        >
-          {/* Repeated skills for infinite scrolling */}
-          {Array(10)
-            .fill(null)
-            .map((_, index) => (
-              <p
-                key={index}
-                className="text-7xl sm:text-8xl md:text-9xl flex items-center"
-              >
-                <span className="text-white">Graphic Design</span>
-                <span className="mx-8 w-8 h-8 bg-[#FB4666] rounded-full inline-block"></span>
-              </p>
-            ))}
+      {/* Graphic Designer */}
+      <Link href="/graphics" className="group relative">
+        <VelocityScroll
+          text="Graphic Designer"
+          direction="ltr"
+          default_velocity={0.5}
+          textGap={120}
+          scrollVelocityFactor={3}
+          element={
+            <span className="w-8 h-8 rounded-full bg-[#F04462] inline-block transition-all duration-300 group-hover:w-4 group-hover:h-4"></span>
+          }
+          className="font-display text-center skillset-text mx-8 text-white drop-shadow-sm md:text-[150px] leading-[10rem] sm:leading-[15rem] md:leading-[20rem] lg:leading-[25rem] opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+        />
+        {/* Video element */}
+        <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <video className="w-3/4 h-3/4" src="/video1.webm" autoPlay loop muted />
         </div>
-      </div>
+      </Link>
 
-      {/* Horizontal line below the skills */}
-      <div className="relative w-full mt-8">
-        <hr className="border-gray-400" />
-      </div>
-    </section>
+      <SkillsSectionHeading />
+
+      {/* VFX Artist */}
+      <Link href="/vfx" className="group relative">
+        <VelocityScroll
+          text="VFX Artist"
+          direction="rtl"
+          default_velocity={0.5}
+          scrollVelocityFactor={3}
+          textGap={120}
+          element={
+            <span className="w-8 h-8 rounded-full bg-[#F04462] inline-block transition-all duration-300 group-hover:w-4 group-hover:h-4"></span>
+          }
+          className="font-display text-center mx-8 skillset-text text-white drop-shadow-sm md:text-[150px] leading-[10rem] sm:leading-[15rem] md:leading-[20rem] lg:leading-[25rem] opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+        />
+        {/* Video element */}
+        <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <video className="w-3/4 h-3/4" src="/video2.webm" autoPlay loop muted />
+        </div>
+      </Link>
+
+      <SkillsSectionHeading />
+
+      {/* Motion Graphics */}
+      <Link href="/motion" className="group relative">
+        <VelocityScroll
+          text="Motion Graphics"
+          direction="ltr"
+          default_velocity={0.5}
+          scrollVelocityFactor={3}
+          textGap={120}
+          element={
+            <span className="w-8 h-8 rounded-full bg-[#F04462] inline-block transition-all duration-300 group-hover:w-4 group-hover:h-4"></span>
+          }
+          className="font-display text-center mx-8 skillset-text text-white drop-shadow-sm md:text-[150px] leading-[10rem] sm:leading-[15rem] md:leading-[20rem] lg:leading-[25rem] opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+        />
+        {/* Video element */}
+        <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <video className="w-3/4 h-3/4" src="/video3.webm" autoPlay loop muted />
+        </div>
+      </Link>
+
+      <SkillsSectionHeading />
+
+      {/* 3D Animation */}
+      <Link href="/3danimation" className="group relative">
+        <VelocityScroll
+          text="3D Animation"
+          direction="rtl"
+          default_velocity={0.5}
+          scrollVelocityFactor={3}
+          textGap={120}
+          element={
+            <span className="w-8 h-8 rounded-full bg-[#F04462] inline-block transition-all duration-300 group-hover:w-4 group-hover:h-4"></span>
+          }
+          className="font-display text-center mx-8 skillset-text text-white drop-shadow-sm md:text-[150px] leading-[10rem] sm:leading-[15rem] md:leading-[20rem] lg:leading-[25rem] opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+        />
+        {/* Video element */}
+        <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <video className="w-3/4 h-3/4" src="/video4.webm" autoPlay loop muted />
+        </div>
+      </Link>
+    </div>
   );
-};
-
-export default SkillsSection;
+}

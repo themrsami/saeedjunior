@@ -66,7 +66,19 @@ const Homepage = () => {
         <div ref={locationRef} className='text-center md:text-right'>
           <h2 className="text-lg md:text-xl mini-text">Based in Dubai</h2>
           <div className='mini-text text-center md:text-right justify-center items-center'>
-            <span className='animate-pulse'>🟢 </span> Available for a full-time position
+            <span className="split-wrap line">
+              <span
+                className="split-inner"
+                style={{
+                  translate: "none",
+                  rotate: "none",
+                  scale: "none",
+                  transform: "translate3d(0px, 0px, 0px)"
+                }}
+              >
+                <i className="available" />
+              </span>
+            </span> Available for a full-time position
           </div>
         </div>
       </div>

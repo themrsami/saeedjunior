@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Link from 'next/link';
+import Circle from './Circle';
 
 const Aboutme = () => {
   const paragraphRef = useRef(null);
@@ -31,13 +32,13 @@ const Aboutme = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-center justify-center h-[50vh] px-4">
-      <div className="w-[60%] px-8"> {/* Set width to 70% and center it */}
+    <section className="flex flex-col items-center justify-center py-4 px-4">
+      <div className="w-full md:w-[65%]"> {/* Set width to 70% and center it */}
         <p
           ref={paragraphRef}
           className="aboutme-text text-left text-3xl sm:text-4xl lg:text-5xl leading-tight space-y-4 text-white"
         >
-          <span className="opacity-10 pl-40">I&apos;m</span> <span className="opacity-10">a</span>{' '}
+          <span className="opacity-10 sm:pl-40">I&apos;m</span> <span className="opacity-10">a</span>{' '}
           <span className="opacity-10">Dubai-based</span> <span className="opacity-10 font-bold">graphic designer</span>{' '}
           <span className="opacity-10">and</span> <span className="opacity-10 font-bold">VFX artist,</span>{' '}
           <span className="opacity-10">with</span> <span className="opacity-10">expertise in</span>{' '}
@@ -51,10 +52,12 @@ const Aboutme = () => {
           <span className="opacity-10">and</span> <span className="opacity-10 font-bold">full-time positions.</span>
         </p>
       </div>
-      <Link href='/about' className='aboutme-text tracking-normal leading-tight text-lg mt-16 sm:text-xl md:text-2xl tracking-wider transition ease-in-out delay-75 hover:glow home-link'>
-        
-        <span class="home-link-text text-white"> ⚪ Learn more</span>
-        <span class="home-link-hover-text-logo"> 🔴 Learn more</span>
+      <Link href='/about' className='flex flex-row items-center space-x-2 group py-16'>
+        <Circle />
+        <div className='aboutme-text tracking-normal leading-tight text-lg sm:text-xl md:text-2xl tracking-wider transition ease-in-out delay-75 hover:glow home-link'>
+          <span className="home-link-text text-white"> Learn more</span>
+          <span className="home-link-hover-text-logo"> Learn more</span>
+        </div>
       </Link>
     </section>
   );

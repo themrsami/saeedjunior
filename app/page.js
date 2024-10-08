@@ -4,6 +4,7 @@ import PageLoader from "./components/PageLoader";
 import Homepage from "./components/Homepage";
 import Aboutme from "./components/Aboutme";
 import SkillsSection from "./components/SkillsSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ export default function Home() {
             {!loading && <Homepage />}
             {!loading && <Aboutme />}
             {!loading && <SkillsSection />}
+            {!loading && <Footer />}
         </>
     );
 }
