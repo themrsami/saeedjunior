@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import PageLoader from "../components/PageLoader";
+import Skillshero from "../components/Skillshero";
 
 export default function Work() {
     const [loading, setLoading] = useState(true);
@@ -12,9 +13,7 @@ export default function Work() {
     return (
         <>
             {loading && <PageLoader title='Work' onComplete={handleLoaderComplete} />}
-            {!loading && <div className='text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl flex justify-center items-center h-[90vh]'>
-                  Selected Work
-                </div>}
+            {!loading && <Skillshero/>}
         </>
     );
 }

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ScrollBasedVelocity() {
   return (
     <div className="py-4 px-2">
-      <Skillsheading />
+      <Skillsheading/>
 
       {/* Graphic Designer */}
       <Link href="/graphics" className="group relative">

@@ -25,7 +25,7 @@ const Skillsheading = () => {
               transform: "translate3d(0px, 0px, 0px)"
             }}
           >
-            Discover my creative expertise
+            Explore my creative expertise
           </span>
         </span>
       </h2>

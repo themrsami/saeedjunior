@@ -60,7 +60,7 @@ const Footer = () => {
       </span>{" "}
       <div className="footer__middle-cta">
         {" "}
-        <Link href='https://www.linkedin.com/in/' target="_blank" className='flex flex-row items-center space-x-2 group py-16'>
+        <Link href='https://www.linkedin.com/in/saeed-ijaz9798' target="_blank" className='flex flex-row items-center space-x-2 group py-16'>
             <Circle />
             <div className='aboutme-text tracking-normal leading-tight text-lg sm:text-xl md:text-2xl tracking-wider transition ease-in-out delay-75 hover:glow home-link'>
             <span className="home-link-text text-white"> Linkedin</span>
