@@ -37,7 +37,7 @@ const Aboutme = () => {
           ref={paragraphRef}
           className="aboutme-text text-left text-3xl sm:text-4xl lg:text-5xl leading-tight space-y-4 text-white"
         >
-          <span className="opacity-10 pl-40">I'm</span> <span className="opacity-10">a</span>{' '}
+          <span className="opacity-10 pl-40">I&apos;m</span> <span className="opacity-10">a</span>{' '}
           <span className="opacity-10">Dubai-based</span> <span className="opacity-10 font-bold">graphic designer</span>{' '}
           <span className="opacity-10">and</span> <span className="opacity-10 font-bold">VFX artist,</span>{' '}
           <span className="opacity-10">with</span> <span className="opacity-10">expertise in</span>{' '}
