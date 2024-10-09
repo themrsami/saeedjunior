@@ -89,7 +89,7 @@ const Homepage = () => {
           <img
             src="/SaeedProfile.png"
             alt="Profile"
-            className="rounded-full w-full p-2 h-full object-cover"
+            className="rounded-full w-full -mb-8 h-full mt-8"
           />
         </div>
       </div>
