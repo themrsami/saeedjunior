@@ -47,8 +47,8 @@ const Intro = () => {
                         transition={{ duration: 0.5 }}
                         className="text-3xl sm:text-4xl md:text-6xl mb-4 px-4 mini-text md:pr-20"
                     >
-                        I craft digital experiences <br />
-                        combining <strong>design</strong>, <strong>motion</strong> & <strong>development</strong>
+                        I craft <strong>digital</strong> experiences <br />
+                        through <strong>design</strong>, <strong>videos</strong> & <strong>graphics</strong>
                     </motion.h1>
                     <motion.p
                         ref={ref}
@@ -58,7 +58,7 @@ const Intro = () => {
                         transition={{ duration: 0.5 }}
                         className="text-xl sm:text-2xl md:text-3xl py-16 px-4 mb-4 mini-text md:pr-20"
                     >
-                        Hi, I&apos;m John Doe, a passionate web developer with a flair for motion design, VFX, and 3D animation. My expertise in crafting dynamic visuals enhances user experiences, making applications not only functional but also visually engaging. I specialize in JavaScript, React, and Next.js, combining technical skills with artistic vision.
+                        Hi, I&apos;m <strong>Saeed</strong>, a <strong>digital designer</strong> and <strong>videographer</strong> based in <strong>Dubai</strong>. My passion lies in creating captivating <strong>video content</strong> that tells stories and connects with audiences. From <strong>shooting high-quality</strong> footage to <strong>post-production</strong> editing, I ensure every visual element is crafted with care. Alongside videography, I specialize in <strong>digital design</strong>, bringing <strong>creativity</strong> and technical expertise together to produce engaging and memorable experiences.
                     </motion.p>
                     <Link href='/Saeed_CV.pdf' target="_blank" className='flex flex-row items-center px-4 space-x-2 group'>
                         <Circle />
