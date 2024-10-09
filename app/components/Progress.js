@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { useAppContext } from '../Context/AppContext';
 
 const Loader = () => {
   const [progress, setProgress] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  const { isLoading, setIsLoading } = useAppContext();
 
   useEffect(() => {
     if (progress < 100) {
@@ -32,7 +33,7 @@ const Loader = () => {
       },500); // Hide the loader after the slide-up animation
 
       // Hide the loader after the slide-up animation
-      setTimeout(() => setIsLoading(false), 500); // Add delay for smoother transition
+      setTimeout(() => setIsLoading(false), 1500); // Add delay for smoother transition
     }
   }, [progress]);
 

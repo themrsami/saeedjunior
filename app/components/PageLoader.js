@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { useAppContext } from '../Context/AppContext';
 
 const PageLoader = ({ title, onComplete }) => {
     const targetRef = useRef(null);

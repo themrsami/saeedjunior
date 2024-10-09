@@ -1,25 +1,19 @@
 'use client'
-import React, { useState } from "react";
-import PageLoader from "./components/PageLoader";
 import Homepage from "./components/Homepage";
 import Aboutme from "./components/Aboutme";
 import SkillsSection from "./components/SkillsSection";
 import Footer from "./components/Footer";
+import { useAppContext } from "./Context/AppContext";
 
 export default function Home() {
-    const [loading, setLoading] = useState(true);
-
-    const handleLoaderComplete = () => {
-        setLoading(false); // Hide loader and show Homepage
-    };
+    const {isLoading, setIsLoading} = useAppContext();
 
     return (
         <>
-            {loading && <PageLoader title='Home' onComplete={handleLoaderComplete} />}
-            {!loading && <Homepage />}
-            {!loading && <Aboutme />}
-            {!loading && <SkillsSection />}
-            {!loading && <Footer />}
+            <Homepage />
+            <Aboutme />
+            <SkillsSection />
+            <Footer />
         </>
     );
 }

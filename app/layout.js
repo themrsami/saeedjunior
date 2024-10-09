@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Progress from "./components/Progress";
 import Cursor from "./components/Cursor";
+import { AppProvider } from "./Context/AppContext";
+import ClientLayout from "./ClientLayout/ClientLayout";
 
 const mangoGrotesque = localFont({
   src: "./fonts/MangoGrotesque-Light.woff2",
@@ -20,10 +22,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${mangoGrotesque.className} antialiased`}
       >
-        <Cursor />
-        <Progress />
-        <Navbar />
-        {children}
+        <AppProvider>
+          <ClientLayout>
+            <Cursor />
+            <Navbar />
+            {children}
+          </ClientLayout>
+        </AppProvider>
       </body>
     </html>
   );
