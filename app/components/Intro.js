@@ -58,7 +58,7 @@ const Intro = () => {
                         transition={{ duration: 0.5 }}
                         className="text-xl sm:text-2xl md:text-3xl py-16 px-4 mb-4 mini-text md:pr-20"
                     >
-                        Hi, I'm John Doe, a passionate web developer with a flair for motion design, VFX, and 3D animation. My expertise in crafting dynamic visuals enhances user experiences, making applications not only functional but also visually engaging. I specialize in JavaScript, React, and Next.js, combining technical skills with artistic vision.
+                        Hi, I&apos;m John Doe, a passionate web developer with a flair for motion design, VFX, and 3D animation. My expertise in crafting dynamic visuals enhances user experiences, making applications not only functional but also visually engaging. I specialize in JavaScript, React, and Next.js, combining technical skills with artistic vision.
                     </motion.p>
                     <Link href='/Saeed_CV.pdf' target="_blank" className='flex flex-row items-center px-4 space-x-2 group'>
                         <Circle />
