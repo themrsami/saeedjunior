@@ -48,7 +48,7 @@ const Intro = () => {
                         className="text-3xl sm:text-4xl md:text-6xl mb-4 px-4 mini-text md:pr-20"
                     >
                         I craft <strong>digital</strong> experiences <br />
-                        through <strong>design</strong>, <strong>videos</strong> & <strong>graphics</strong>
+                        through <strong>design</strong>, <strong>videos</strong> & <strong>graphics.</strong>
                     </motion.h1>
                     <motion.p
                         ref={ref}
