@@ -38,20 +38,20 @@ const AboutSkills = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 mini-text justify-center items-center gap-8">
                 {[
                   {
-                    title: "Motion Design",
-                    items: ["UI Animations", "Logo Animations", "Character Animation", "Motion Graphics"]
+                    title: "DIGITAL DESIGNER",
+                    items: ["Print Design", "Digital Design", "Branding & identity", "Ad Compaigns"]
                   },
                   {
-                    title: "3D Animation",
-                    items: ["3D Modeling", "Rigging", "Texturing", "Animation and Rendering"]
+                    title: "VIDEOGRAPHY",
+                    items: ["Branded Video Compaigns", "Social Media Content", "Cinematography", "Lighting & Composition"]
                   },
                   {
-                    title: "Graphic Design",
-                    items: ["Print Design", "Digital Illustrations", "Infographics", "Branding & Identity"]
+                    title: "VIDEO CREATION",
+                    items: ["Post-Production", "Color Grading", "Video Effects & Transitions", "Storyboarding"]
                   },
                   {
-                    title: "Video Editing",
-                    items: ["Post-Production", "Color Grading", "Sound Design", "Visual Effects"]
+                    title: "3D ANIMATIONS",
+                    items: ["Product Visualization", "Motion Graphics", "Unreal Engine", "Lighting & Rendering"]
                   }
                 ].map(skill => (
                   <div className="resume__skill" key={skill.title}>
