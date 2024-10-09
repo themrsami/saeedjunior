@@ -39,7 +39,6 @@ const PageLoader = ({ title, onComplete }) => {
     return (
         <div
             ref={targetRef}
-            className='font-semibold'
             style={{
                 backgroundColor: '#FB4566',
                 width: '100vw',
