@@ -37,18 +37,18 @@ const Toolbox = () => {
             <div className="resume__subsection-content">
               <div className="grid grid-cols-1 md:grid-cols-2 mini-text justify-center items-center gap-8">
                 {[
-                  "Motion Design",
-                  "3D Animation",
-                  "Graphic Design",
-                  "Video Editing",
-                  "UI/UX Design",
-                  "Digital Illustration",
-                  "Character Animation",
+                  "Illustrator",
+                  "Photoshop",
+                  "Premier Pro",
+                  "After Effects",
+                  "Videography",
+                  "Post Production",
+                  "Unreal Engine",
+                  "Blender",
                   "Visual Effects",
-                  "Storyboarding",
                   "Color Grading",
-                  "Post-Production",
-                  "Branding & Identity"
+                  "UI/UX Design",
+                  "Product Rendering"
                 ].map((skill, index) => (
                   <div className="resume__skill" key={index} style={{ display: 'flex', alignItems: 'center' }}>
                     <div
