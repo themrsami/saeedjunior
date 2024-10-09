@@ -12,7 +12,7 @@ const titleMap = {
   '/vfx': 'VFX FOR MOTION',
   '/motion': 'MOTION GRAPHICS',
   '/graphics': 'GRAPHIC DESIGN',
-  '3danimation': '3D ANIMATION',
+  '/3danimation': '3D ANIMATION',
   // Add more routes as needed
 };
 
