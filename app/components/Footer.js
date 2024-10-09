@@ -48,7 +48,7 @@ const Footer = () => {
                     transform: "translate3d(0px, 0px, 0px)",
                   }}
                 >
-                  hello@saeedjunior.com
+                  saeedijaz000@gmail.com
                 </span>
               </span>
             </span>
