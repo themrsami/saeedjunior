@@ -42,7 +42,7 @@ const Aboutme = () => {
           <span className="opacity-10">Dubai-based</span> <span className="opacity-10 font-bold">Digital Designer</span>{' '}
           <span className="opacity-10">and</span> <span className="opacity-10 font-bold">Video Editor,</span>{' '}
           <span className="opacity-10">with</span> <span className="opacity-10">expertise in</span>{' '}
-          <span className="opacity-10 font-bold">3D animation,</span>
+          <span className="opacity-10 font-bold">3D animation, </span>
           <span className="opacity-10 font-bold">motion graphics</span> <span className="opacity-10">and</span>{' '}
           <span className="opacity-10 font-bold">VFX.</span>{' '}
           <span className="opacity-10">I</span> <span className="opacity-10">help</span>{' '}
