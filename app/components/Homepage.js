@@ -84,12 +84,12 @@ const Homepage = () => {
       </div>
 
       {/* Middle Section (Image with Animated Gradient Circle) */}
-      <div ref={profileImageRef} className="relative flex items-center justify-center p-12">
-        <div className="gradient-circle max-w-[900px] max-h-[900px] flex items-center justify-center">
+      <div ref={profileImageRef} className="relative flex items-center justify-center p-6 m-4 border-2 border-[#FB4F66] rounded-full">
+        <div className="gradient-circle max-w-[800px] max-h-[800px] flex items-center justify-center">
           <img
-            src="/try.png"
+            src="/Skull.png"
             alt="Profile"
-            className="rounded-full w-full -mb-8 h-full mt-8"
+            className="h-full w-full object-cover rounded-full -mb-20 mt-20"
           />
         </div>
       </div>
