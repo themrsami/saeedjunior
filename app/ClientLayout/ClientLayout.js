@@ -6,8 +6,8 @@ import { useAppContext } from '../Context/AppContext';
 import { usePathname } from 'next/navigation'; // Correct usage for Next.js 14+
 
 const titleMap = {
-  '/': 'Home',
-  '/about': 'About Me',
+  '/': 'HOME',
+  '/about': 'ABOUT',
   '/work': 'Work',
   '/vfx': 'VFX FOR MOTION',
   '/motion': 'MOTION GRAPHICS',
