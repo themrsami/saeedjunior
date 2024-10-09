@@ -38,22 +38,28 @@ const Experience = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 mini-text justify-center items-center gap-8">
                 {[
                   {
-                    position: "Designer",
+                    position: "DIGITAL DESIGNER & CONTENT CREATOR",
                     company: "@Vicekeeper",
-                    dateFrom: "Jan 2022",
+                    dateFrom: "Oct 2023",
                     dateTo: "Present"
                   },
                   {
-                    position: "Motion Designer",
-                    company: "@Creative Agency",
-                    dateFrom: "Mar 2021",
-                    dateTo: "Dec 2021"
+                    position: "DESIGNER & CONTENT CREATOR",
+                    company: "@CareZone (Dubai-Freelance)",
+                    dateFrom: "Feb 2024",
+                    dateTo: "Aug 2024"
                   },
                   {
-                    position: "3D Animator",
-                    company: "@Animation Studio",
-                    dateFrom: "May 2020",
-                    dateTo: "Feb 2021"
+                    position: "VIDEOGRAPHER",
+                    company: "@Local Business (Pakistan)",
+                    dateFrom: "2021",
+                    dateTo: "2023"
+                  },
+                  {
+                    position: "PHOTOGRAPHER & VIDEOGRAPHER",
+                    company: "@Ravi Studios (Pakistan)",
+                    dateFrom: "2018",
+                    dateTo: "2019"
                   }
                 ].map((experience, index) => (
                   <div className="resume__experience-item" key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
