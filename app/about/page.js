@@ -14,13 +14,13 @@ export default function About() {
         <motion.div
             className='text-white z-10 flex justify-center items-center'
             style={{
-            fontSize: 'clamp(50px, calc(100vw / 8), 500px)', // Font size settings
+            fontSize: 'clamp(50px, calc(100vw / 8), 450px)', // Font size settings
             }}
             initial={{ y: 50, opacity: 0 }} // Initial state
             animate={{ y: 0, opacity: 1 }} // Animate to this state
             transition={{ duration: 1, ease: 'easeOut' }} // Transition properties
         >
-            Motion Designer & VFX Editor
+            Digital Designer & Content Creator
         </motion.div>
         <video
             className="absolute inset-0 w-full h-full opacity-50"
