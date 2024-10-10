@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'; // Correct usage for Next.js 14+
 const titleMap = {
   '/': 'HOME',
   '/about': 'ABOUT',
-  '/work': 'Work',
+  '/work': 'WORK',
   '/vfx': 'VFX FOR MOTION',
   '/motion': 'MOTION GRAPHICS',
   '/graphics': 'GRAPHIC DESIGN',
