@@ -13,7 +13,8 @@ module.exports = {
   			foreground: 'var(--foreground)'
   		},
   		fontSize: {
-  			clamp: 'clamp(1rem, 6vw, 10rem)'
+  			clamp: 'clamp(1rem, 5vw, 12rem)',
+			headingclamp: 'clamp(1rem, 7vw, 12rem)'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

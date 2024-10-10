@@ -28,7 +28,7 @@ const Homepage = () => {
     >
       {/* Left Side (Text Section) */}
       <div className="flex flex-col justify-center -space-y-2">
-        <h1 className="text-7xl md:text-7xl lg:text-clamp text-center md:text-right">Saeed Ijaz</h1>
+        <h1 className="text-7xl md:text-7xl lg:text-headingclamp text-center md:text-right">Saeed Ijaz</h1>
         <div className='text-center md:text-right'>
           <h2 className="text-lg md:text-xl mini-text">Based in Dubai</h2>
           <div className='mini-text text-center md:text-right justify-center items-center'>
