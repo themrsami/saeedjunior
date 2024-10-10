@@ -30,10 +30,10 @@ const Intro = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Image
-                            src="/SaeedProfile.png"
+                            src="/Skull.png"
                             alt="Profile Picture"
-                            width={400}
-                            height={400}
+                            width={500}
+                            height={500}
                             className="rounded-full"
                         />
                     </motion.div>
