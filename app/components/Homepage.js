@@ -1,24 +1,31 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Image from 'next/image';
 
 const Homepage = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Initially hide the container and animate it
-    gsap.set(containerRef.current, { visibility: 'hidden' }); // Initially set to hidden
+    // Initially hide the container and set it below the viewport
+    gsap.set(containerRef.current, { opacity: 0, y: 200, visibility: 'hidden' });
 
-    gsap.fromTo(
-      containerRef.current,
-      { y: 200, opacity: 0, visibility: 'visible' }, // Start hidden and from below
-      {
-        duration: 1.2, // Smooth transition time
-        y: 0, // End at normal position
-        opacity: 1, // Fade in smoothly
-        ease: 'power2.out', // Smooth ease effect for fluid motion
-      }
-    );
+    // Animate content from bottom to its original position
+    const timeline = gsap.timeline({
+      delay: 0.2, // Delay before starting the animation (optional)
+    });
+
+    timeline.to(containerRef.current, {
+      y: 0,         // Move to original position
+      opacity: 1,   // Fade in
+      visibility: 'visible', // Make visible during animation
+      duration: 1.2, // Duration of the animation
+      ease: 'power2.out', // Easing for smooth animation
+    });
+
+    return () => {
+      timeline.kill(); // Cleanup animation on unmount
+    };
   }, []);
 
   return (
@@ -50,15 +57,13 @@ const Homepage = () => {
       </div>
 
       {/* Middle Section (Image with Animated Gradient Circle) */}
-      <div className="relative flex items-center justify-center p-6 m-4 border-2 border-[#FB4F66] rounded-full">
-        <div className="gradient-circle max-w-[650px] max-h-[650px] flex items-center justify-center">
-          <img
-            src="/Skull.png"
-            alt="Profile"
-            className="h-full w-full object-cover rounded-full -mb-12 mt-12"
-          />
-        </div>
-      </div>
+      <Image
+        src="/skull.png"
+        alt="Profile"
+        width={500}
+        height={500}
+        className="rounded-full m-12"
+      />
 
       {/* Right Side (Text Section) */}
       <div className="flex flex-col justify-center items-center mt-4 md:mt-0 text-center md:text-left">
