@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Image from 'next/image';
 
 const Homepage = () => {
   const containerRef = useRef(null);
@@ -57,12 +56,10 @@ const Homepage = () => {
       </div>
 
       {/* Middle Section (Image with Animated Gradient Circle) */}
-      <Image
+      <img
         src="/skull.png"
         alt="Profile"
-        width={500}
-        height={500}
-        className="rounded-full m-12"
+        className="w-3/4 h-auto md:w-1/4 md:h-auto rounded-full m-12"
       />
 
       {/* Right Side (Text Section) */}
