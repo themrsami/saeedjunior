@@ -30,7 +30,7 @@ const Intro = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Image
-                            src="/Skull.png"
+                            src="/images/Skull.png"
                             alt="Profile Picture"
                             width={500}
                             height={500}
