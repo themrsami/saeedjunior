@@ -57,7 +57,7 @@ const Homepage = () => {
 
       <div className="relative w-3/4 h-auto md:w-1/4 md:h-auto rounded-full m-12">
         <img
-          src="/skull.png"
+          src="/images/Skull.png"
           alt="Profile"
           className="w-full h-auto rounded-full"
         />
