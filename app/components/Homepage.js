@@ -55,12 +55,13 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Middle Section (Image with Animated Gradient Circle) */}
-      <img
-        src="/skull.png"
-        alt="Profile"
-        className="w-3/4 h-auto md:w-1/4 md:h-auto rounded-full m-12"
-      />
+      <div className="relative w-3/4 h-auto md:w-1/4 md:h-auto rounded-full m-12">
+        <img
+          src="/skull.png"
+          alt="Profile"
+          className="w-full h-auto rounded-full"
+        />
+      </div>
 
       {/* Right Side (Text Section) */}
       <div className="flex flex-col justify-center items-center mt-4 md:mt-0 text-center md:text-left">
